@@ -4,5 +4,12 @@ import "fmt"
 
 
 func main(){
-    fmt.Println("mem go")
+    //var p *[]int = new([]int)
+    //var v []int = make([]int, 10)
+
+    var p *[]int = new([]int)
+    fmt.Println(p)
+    *p = make([]int,10,10)
+    fmt.Println(p)
+    fmt.Println((*p)[2])
 }
