@@ -4,9 +4,6 @@ import "fmt"
 
 
 func main(){
-    //var p *[]int = new([]int)
-    //var v []int = make([]int, 10)
-
     var p *[]int = new([]int)
     fmt.Println(p)
     *p = make([]int,10,10)
