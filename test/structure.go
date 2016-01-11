@@ -12,4 +12,11 @@ func main(){
     person = Person{name:"Tom", age:30, email: "tom@gmail.com"}
 
     fmt.Println(person)
+
+    pPerson := &person
+    fmt.Println(pPerson)
+
+    pPerson.age = 40
+    pPerson.name = "Jerry"
+    fmt.Println(person)
 }
