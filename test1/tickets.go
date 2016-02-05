@@ -22,6 +22,12 @@ func sell_tickets(i int){
 
 func main(){
     runtime.GOMAXPROCS(4)
-    rand.Seed()
+    rand.Seed(time.Now().Unix())
 
+    for i:=0;i<5;i++{
+        go sell_tickets(i)
+    }
+    var input string
+    fmt.Scanln(&input)
+    fmt.Println(total_tickets, "done")
 }
