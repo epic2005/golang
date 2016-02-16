@@ -3,12 +3,15 @@ package main
 import "fmt"
 import "time"
 import "math/rand"
+import "sync"
 import "runtime"
 
 var total_tickets int32 = 10;
+var mutex = &sync.Mutex{};
 
 func sell_tickets(i int){
     for{
+        mutex.Lock()
         if total_tickets > 0 {
             time.Sleep(time.Duration(rand.Intn(5)) * time.Millisecond)
             total_tickets--
@@ -16,6 +19,7 @@ func sell_tickets(i int){
         }else{
             break
         }
+        mutex.Unlock()
     }
 }
 
