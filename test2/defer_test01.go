@@ -1,7 +1,7 @@
 package main
 
 func test(a, b int){
-	defer println("dispose1 ...")
+	defer println("dispose2 ...")
 	println(a / b)
 }
 
