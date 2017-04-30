@@ -1,9 +1,13 @@
 package main
 
-import (
-	"fmt"
-)
+type X int
 
-func main()  {
-	fmt.Printf("aaaa")
+func (x *X) inc(){
+	*x ++
+}
+
+func main(){
+	var x X
+	x.inc()
+	println(x)
 }
