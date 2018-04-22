@@ -1,11 +1,23 @@
 package main
 
-import (
-	"fmt"
-)
 
+func mkslice() []int {
+	s := make([]int, 0, 10)
+	s = append(s, 100)
+	return s
+}
+
+func mkmap() map[string]int {
+	m := make(map[string]int)
+	m["a"] = 300
+	return m
+}
 
 func main() {
-	var s string = "test ref"
-	fmt.Printf("%s\n", s)
+
+	m := mkmap()
+	println(m["a"])
+
+	s := mkslice()
+	println(s[0])
 }
